@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="810.0" prefWidth="1440.0" style="-fx-background-color: #e6e4e4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdministratorPage">
+   <children>
+      <ImageView fitHeight="754.0" fitWidth="630.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/koreanGirlGlassesAdministratorPage.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="175.0" layoutY="635.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" width="1440.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="105.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" width="1440.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="69.0" layoutX="61.0" layoutY="19.0" stroke="#ee4540" strokeType="INSIDE" strokeWidth="3.0" style="-fx-fill: transparent;" width="256.0" />
+      <ImageView fitHeight="57.0" fitWidth="431.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/loginPageLogo.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="productTableView" layoutX="325.0" layoutY="121.0" prefHeight="480.0" prefWidth="705.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" stylesheets="@tableViewStyle.css">
+         <columns>
+            <TableColumn fx:id="productIdTableColumn" prefWidth="100.0" text="Product ID" />
+            <TableColumn fx:id="productNameTableColumn" prefWidth="135.0" text="Product Name" />
+            <TableColumn fx:id="categoryIdTableColumn" prefWidth="135.0" text="Category" />
+            <TableColumn fx:id="supplierIdTableColumn" prefWidth="135.0" text="Supplier" />
+            <TableColumn fx:id="quantityTableColumn" prefWidth="100.0" text="Quantity" />
+            <TableColumn fx:id="priceTableColumn" prefWidth="100.0" text="Price" />
+         </columns>
+      </TableView>
+      <Button contentDisplay="CENTER" layoutX="757.0" layoutY="726.0" mnemonicParsing="false" onAction="#deleteProductButton_OnAction" prefHeight="36.0" prefWidth="116.0" style="-fx-background-color: #EE4540;" text="Delete" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="480.0" layoutY="726.0" mnemonicParsing="false" onAction="#updateModeProductButton_OnAction" prefHeight="36.0" prefWidth="116.0" style="-fx-background-color: #EE4540;" text="Edit" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="343.0" layoutY="726.0" mnemonicParsing="false" onAction="#addProductAddButton_OnAction" prefHeight="36.0" prefWidth="116.0" style="-fx-background-color: #EE4540;" text="Add" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="addProductQuantity" layoutX="644.0" layoutY="675.0" promptText="Quantity" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <TextField fx:id="addProductProductName" layoutX="70.0" layoutY="675.0" promptText="Product Name" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <Button contentDisplay="CENTER" layoutX="1254.0" layoutY="656.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: transparent;" text="Profile Settings" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="1257.0" layoutY="687.0" mnemonicParsing="false" onAction="#manageProfilesButton_OnAction" prefHeight="36.0" prefWidth="122.0" style="-fx-background-color: transparent;" text="Manage Profiles" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="addProductPrice" layoutX="835.0" layoutY="675.0" promptText="Price" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <ComboBox fx:id="addProductCategoryId" layoutX="262.0" layoutY="675.0" prefHeight="26.0" prefWidth="171.0" promptText="Category" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <ComboBox fx:id="addProductSupplierId" layoutX="453.0" layoutY="675.0" prefHeight="26.0" prefWidth="171.0" promptText="Supplier" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <Button fx:id="addProductClearButton" contentDisplay="CENTER" layoutX="1006.0" layoutY="726.0" mnemonicParsing="false" onAction="#addProductClearButton_OnAction" prefHeight="36.0" prefWidth="116.0" style="-fx-background-color: #EE4540;" text="Clear" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ComboBox fx:id="searchComboBox" layoutX="453.0" layoutY="38.0" prefHeight="26.0" prefWidth="171.0" promptText="Search by Column" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <TextField fx:id="searchTextField" layoutX="649.0" layoutY="38.0" onAction="#searchTextField_OnChange" promptText="Search Keyword" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <Button contentDisplay="CENTER" layoutX="207.0" layoutY="726.0" mnemonicParsing="false" onAction="#saveChangesButton_onAction" prefHeight="36.0" prefWidth="116.0" style="-fx-background-color: #EE4540;" text="Save" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="619.0" layoutY="726.0" mnemonicParsing="false" onAction="#updateProductButton_OnAction" prefHeight="36.0" prefWidth="116.0" style="-fx-background-color: #EE4540;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView fx:id="categoryTableView" editable="true" layoutX="1092.0" layoutY="121.0" prefHeight="480.0" prefWidth="276.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" stylesheets="@tableViewStyle.css">
+         <columns>
+            <TableColumn fx:id="idCategoryTableColumn" prefWidth="108.0" text="Category ID" />
+            <TableColumn fx:id="nameCategoryTableColumn" prefWidth="163.0" text="Category Name" />
+         </columns>
+      </TableView>
+      <TextField fx:id="categoryNameTextField" layoutX="1092.0" layoutY="41.0" prefHeight="26.0" prefWidth="98.0" promptText="Category Name" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <Button contentDisplay="CENTER" layoutX="1210.0" layoutY="36.0" mnemonicParsing="false" onAction="#categoriesCategoryAddButton_OnAction" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: transparent;" text="Add" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="1262.0" layoutY="36.0" mnemonicParsing="false" onAction="#categoriesCategoryUpdateMode_OnAction" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: transparent;" text="Edit" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="1306.0" layoutY="36.0" mnemonicParsing="false" onAction="#categoriesCategoryUpdate_OnAction" prefHeight="36.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Update" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="1368.0" layoutY="36.0" mnemonicParsing="false" onAction="#categoriesCategoryDeleteButton_OnAction" prefHeight="36.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Delete" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="1256.0" layoutY="720.0" mnemonicParsing="false" onAction="#logOutButton_OnAction" prefHeight="36.0" prefWidth="73.0" style="-fx-background-color: transparent;" text="Log Out" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

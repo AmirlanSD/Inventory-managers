@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UsersManagement">
+   <children>
+      <AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #DEE0E2;">
+         <children>
+            <ImageView fitHeight="416.0" fitWidth="317.0" layoutX="682.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/allPopUpKoreanGirl.jpg" />
+               </image>
+            </ImageView>
+            <TableView fx:id="usersTableView" layoutX="14.0" layoutY="94.0" prefHeight="313.0" prefWidth="700.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" stylesheets="@tableViewStyle.css">
+               <columns>
+                  <TableColumn fx:id="usersIdTableColumn" prefWidth="36.0" text="ID" />
+                  <TableColumn fx:id="usersUNameTableColumn" prefWidth="113.0" text="Users Name" />
+                  <TableColumn fx:id="usersRoleTableColumn" prefWidth="68.0" text="Role" />
+                  <TableColumn fx:id="usersNameTableColumn" prefWidth="72.0" text="Name" />
+                  <TableColumn fx:id="usersAddressTableColumn" prefWidth="114.0" text="Address" />
+                  <TableColumn fx:id="usersContactNumberTableColumn" prefWidth="99.0" text="Contact" />
+                  <TableColumn fx:id="usersEmailAddressTableColumn" prefWidth="126.0" text="Email" />
+                  <TableColumn fx:id="usersStatusTableColumn" prefWidth="67.0" text="Status" />
+               </columns>
+            </TableView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="77.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" width="960.0" />
+            <ImageView fitHeight="57.0" fitWidth="293.0" layoutX="-41.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../resources/images/loginPageLogo.png" />
+               </image>
+            </ImageView>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" layoutX="14.0" layoutY="8.0" stroke="#ee4540" strokeType="INSIDE" strokeWidth="3.0" style="-fx-fill: transparent;" width="167.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="3.0" layoutY="433.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" width="960.0" />
+            <Button contentDisplay="CENTER" layoutX="397.0" layoutY="20.0" mnemonicParsing="false" onAction="#addUsersSaveButton_OnAction" prefHeight="36.0" prefWidth="53.0" style="-fx-background-color: transparent;" text="Save" textFill="#510a32" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="addUsersUsername" layoutX="116.0" layoutY="469.0" prefHeight="26.0" prefWidth="98.0" promptText="UserName" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+            <Button contentDisplay="CENTER" layoutX="495.0" layoutY="19.0" mnemonicParsing="false" onAction="#deleteUsersButton_OnAction" prefHeight="36.0" prefWidth="66.0" style="-fx-background-color: transparent;" text="Delete" textFill="#510a32" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextField fx:id="addUsersPassword" layoutX="234.0" layoutY="469.0" prefHeight="26.0" prefWidth="98.0" promptText="Password" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+            <TextField fx:id="addUsersName" layoutX="473.0" layoutY="469.0" prefHeight="26.0" prefWidth="98.0" promptText="Name" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+            <TextField fx:id="addUsersAddress" layoutX="593.0" layoutY="469.0" prefHeight="26.0" prefWidth="98.0" promptText="Address" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+            <TextField fx:id="addUsersContactNumber" layoutX="706.0" layoutY="469.0" prefHeight="26.0" prefWidth="98.0" promptText="Contact" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+            <TextField fx:id="addUsersEmailAddress" layoutX="808.0" layoutY="469.0" prefHeight="26.0" prefWidth="98.0" promptText="Email" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+            <ComboBox fx:id="addUsersRole" layoutX="351.0" layoutY="469.0" prefHeight="26.0" prefWidth="98.0" promptText="Role" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+            <Button contentDisplay="CENTER" layoutX="450.0" layoutY="20.0" mnemonicParsing="false" onAction="#addUsersButton_OnAction" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: transparent;" text="Add" textFill="#510a32" underline="true">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

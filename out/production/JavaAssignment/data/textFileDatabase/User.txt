@@ -1,0 +1,8 @@
+1|Shan|123|Administrator|Shan|street|01010|shanmail|true
+2|Amir|321|Administrator|Amir|street|010100|amirmail|true
+6|Aidar|1234|Administrator|Aidar|street1|0101010|mail.com|true
+7|Mo|12345|Product Manager|Mo|seee|2432423|Email|true
+8|Akhat|123456|Product Manager|Akhat|Parkhill|00101010101|Email|true
+9|Jiha|123456|Product Manager|Jiha|pp|213123|Email|true
+10|test|test|Product Manager|test|teststreet|39934|Email|true
+11|test1|test2|Product Manager|test2|streeete|328947324|Email|true

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-background-color: #DEE0E2;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CatalogueTableController">
+   <children>
+      <ImageView fitHeight="416.0" fitWidth="317.0" layoutX="682.0" layoutY="76.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/allPopUpKoreanGirl.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="catalogueTableView" layoutX="14.0" layoutY="94.0" prefHeight="197.0" prefWidth="610.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" stylesheets="@tableViewStyle.css">
+        <columns>
+          <TableColumn fx:id="catalogueIdTableColumn" prefWidth="36.0" text="ID" />
+          <TableColumn fx:id="nameCatalogueTableColumn" text="Name" />
+            <TableColumn fx:id="userUserIdTableColumn" prefWidth="55.0" text="User" />
+            <TableColumn fx:id="productsTableColumn" prefWidth="142.0" text="Products" />
+            <TableColumn fx:id="startDateTableColumn" prefWidth="90.0" text="Start" />
+            <TableColumn fx:id="endDateTableColumn" prefWidth="99.0" text="End" />
+            <TableColumn fx:id="descriptionTableColumn" prefWidth="103.0" text="Desc" />
+        </columns>
+      </TableView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="77.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" width="960.0" />
+      <ImageView fitHeight="57.0" fitWidth="293.0" layoutX="-41.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/loginPageLogo.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" layoutX="14.0" layoutY="8.0" stroke="#ee4540" strokeType="INSIDE" strokeWidth="3.0" style="-fx-fill: transparent;" width="167.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="98.0" layoutX="-2.0" layoutY="433.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" width="960.0" />
+      <TextField fx:id="addCatalogueName" layoutX="329.0" layoutY="304.0" prefHeight="26.0" prefWidth="98.0" promptText="CatalogueName" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <ComboBox fx:id="addCatalogueProducts" layoutX="215.0" layoutY="304.0" prefHeight="26.0" prefWidth="98.0" promptText="Products" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <TableView fx:id="addCatalogueSelectedProductsTableView" layoutX="14.0" layoutY="304.0" prefHeight="115.0" prefWidth="167.0" style="-fx-effect: dropshadow(three-pass-box, #000000, 10, 0, 0, 0);" stylesheets="@tableViewStyle.css">
+         <columns>
+            <TableColumn fx:id="addCatalogueSelectedProductsNameTableColumn" prefWidth="162.0" text="Name" />
+         </columns>
+      </TableView>
+      <DatePicker fx:id="addCatalogueStartingDate" layoutX="329.0" layoutY="349.0" prefHeight="25.0" prefWidth="110.0" promptText="Start Date" style="-fx-background-color: transparent; -fx-border-color: #ee4540; -fx-border-width: 0 0 1 0;" />
+      <DatePicker fx:id="addCatalogueEndingDate" layoutX="329.0" layoutY="393.0" prefHeight="25.0" prefWidth="110.0" promptText="End Date" style="-fx-background-color: transparent; -fx-border-color: #ee4540; -fx-border-width: 0 0 1 0;" />
+      <TextArea fx:id="addCatalogueDescription" layoutX="461.0" layoutY="304.0" prefHeight="115.0" prefWidth="153.0" style="-fx-background-color: transparent; -fx-border-color: #ee4540; -fx-border-width: 0 0 1 0;" />
+      <Button contentDisplay="CENTER" layoutX="399.0" layoutY="456.0" mnemonicParsing="false" onAction="#addCatalogueSubmitButton_OnAction" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: transparent;" text="Add" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="443.0" layoutY="456.0" mnemonicParsing="false" onAction="#deleteCatalogueButton_OnAction" prefHeight="36.0" prefWidth="71.0" style="-fx-background-color: transparent;" text="Delete" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="340.0" layoutY="456.0" mnemonicParsing="false" onAction="#saveCatalogue_OnAction" prefHeight="36.0" prefWidth="55.0" style="-fx-background-color: transparent;" text="Save" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="215.0" layoutY="344.0" mnemonicParsing="false" onAction="#addCatalogueSelectedProductsAddButton_OnAction" prefHeight="36.0" prefWidth="44.0" style="-fx-background-color: transparent;" text="Add" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button contentDisplay="CENTER" layoutX="252.0" layoutY="344.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="62.0" style="-fx-background-color: transparent;" text="Remove" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="540.0" prefWidth="960.0" style="-fx-min-height: 540; -fx-min-width: 960; -fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPage">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="69.0" layoutX="133.0" layoutY="46.0" stroke="#ee4540" strokeType="INSIDE" strokeWidth="3.0" style="-fx-fill: transparent;" width="256.0" />
+      <Label layoutX="139.0" layoutY="163.0" text="Username" textFill="#c72c41">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="139.0" layoutY="279.0" text="Password" textFill="#c72c41">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="userTextField" layoutX="139.0" layoutY="206.0" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <Button contentDisplay="CENTER" layoutX="139.0" layoutY="386.0" mnemonicParsing="false" onAction="#signInButton_OnAction" prefHeight="36.0" prefWidth="171.0" style="-fx-background-color: #EE4540;" text="Sign In" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button contentDisplay="CENTER" layoutX="140.0" layoutY="442.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="171.0" style="-fx-background-color: transparent;" text="Forgot Password" textFill="#510a32" underline="true">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <ImageView fitHeight="540.0" fitWidth="457.0" layoutX="517.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/loginPageKoreanGirl.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="57.0" fitWidth="431.0" layoutX="72.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resources/images/loginPageLogo.png" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="passwordTextField" layoutX="139.0" layoutY="319.0" style="-fx-background-color: transparent; -fx-border-color: #510A32; -fx-border-width: 0 0 1 0;" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="540.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="77.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#e5e7e6" />
+                  <Stop color="#e5e7e6" offset="0.007407407407407408" />
+                  <Stop color="#e6e4e4" offset="0.6333333333333333" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+   </children>
+</AnchorPane>
